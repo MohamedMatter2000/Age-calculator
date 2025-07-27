@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to left, #2a0845, #6441a5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+h1:last-of-type {
+  color: #f77a36;
+}
+.content {
+  margin: 30px 0;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.content input {
+  flex: 1;
+  margin-right: 20px;
+  padding: 14px 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+.content input:focus {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+}
+.content input::-webkit-calendar-picker-indicator {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  background-position: calc(100% - 10px);
+  position: absolute;
+  background-size: 30px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.content input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+.content button {
+  background: #f77a36;
+  padding: 14px 22px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(247, 122, 54, 0.3);
+}
+.content button:hover {
+  background: #e66a2b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(247, 122, 54, 0.4);
+}
+.content button:active {
+  transform: translateY(0);
+}
+.result {
+  margin-top: 30px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.result p span {
+  color: #f77a36;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.error {
+  color: #ff6b6b !important;
+  font-style: italic;
+  animation: shake 0.5s ease-in-out;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+  h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+  .content {
+    flex-direction: column;
+    padding: 25px;
+  }
+  .content input {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .content button {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .result p {
+    font-size: 18px;
+  }
+  .result p span {
+    font-size: 20px;
+  }
+}
